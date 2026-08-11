@@ -1,0 +1,277 @@
+/* External CSS - Travel Booking Website */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    /* Local Beach Image */
+    background-image:url("images/beach.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* Dark transparent layer */
+
+.overlay{
+
+    width:100%;
+    min-height:100vh;
+
+    background:rgba(0,0,0,0.45);
+
+    display:flex;
+
+    justify-content:flex-start;  /* moves to left */
+
+    align-items:center;
+
+    padding-left:70px;
+
+}
+
+
+/* Main Glass Card */
+
+.container{
+
+    width:900px;
+    max-width:95%;
+
+    background:rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.4);
+
+
+    animation:slide 1s ease;
+
+}
+
+
+/* Animation */
+
+@keyframes slide{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+/* Heading */
+
+h1{
+
+    text-shadow:
+    2px 2px 8px black;
+
+}
+
+
+
+/* Subtitle */
+
+.subtitle{
+
+    font-size:17px;
+    color:white;
+
+    text-shadow:
+    1px 1px 5px black;
+
+}
+
+
+
+/* Form Rows */
+
+.row{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* Input Container */
+
+.inputBox{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+/* Labels */
+
+label{
+
+    color:white;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+
+
+/* Input Fields */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    background:white;
+
+    transition:0.3s;
+
+}
+
+
+
+/* Hover Effect */
+
+input:hover,
+select:hover,
+textarea:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+
+/* Focus Effect */
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    box-shadow:
+    0 0 10px #00d4ff;
+
+}
+
+
+
+/* File Input */
+
+input[type="file"]{
+
+    background:white;
+
+    padding:10px;
+
+}
+
+
+
+/* Button Area */
+
+.center{
+
+    text-align:center;
+
+    margin-top:25px;
+
+}
+
+
+/* Button Animation */
+
+button{
+
+    transition:0.4s;
+
+}
+
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.4);
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .row{
+
+        flex-direction:column;
+
+    }
+
+
+    .container{
+
+        padding:20px;
+
+    }
+
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+}
